@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="height: 100%">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+    <meta charset="utf-8">
+    <title>Random Lyrics Finder</title>
+  </head>
+  <body style="height: 100%;">
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">
+      <div class="sign">
+        <div><span class="fast-flicker">r</span>and<span class="flicker">om</span></div>
+        <div><span class="flicker">l</span>yri<span class="fast-flicker">cs</span></div>
+        <div><span class="fast-flicker">f</span>in<span class="flicker">der</span></div>
+      </div>
+      <form method="POST">
+        <div class="input-field">
+          <input type="text" id="name" name="artist" required />
+          <label for="name">Artist name</label>
+        </div>
+        <br>
+        <br>
+        <div class="input-field">
+          <input type="number" id="number" name="number_of_songs" required />
+          <label for="number">Number of songs</label>
+        </div>
+        <br>
+        <br>
+        <div class="input-field">
+          <input type="submit" value="Search" id="submit">
+        </div>
+    </form>
+    </div>
+  </body>
+</html>

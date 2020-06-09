@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{artist}}</title>
+</head>
+
+<body style="width: 100%; height: 100%;">
+  <div style="display: flex; justify-content: space-around;">
+    <div align="center"><a class="cta" href="/">TRY AGAIN!</a></div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+    {% for lyric in lyrics %}
+      <div style="padding: 20px; min-width: 300px;">
+        <h1>{{ lyric.name }}</h1>
+        {{ lyric.text | safe }}
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
